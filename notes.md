@@ -29,7 +29,8 @@ Start Master with
 ##Nodes
 Node registers at start-up with the master
 Single-purpose executable program
-Compile individuall
+Compile individually
+Communicates with other nodes via topics and services
 
 Run node with
     
@@ -130,6 +131,9 @@ A message may be composed of other messages
 ### Constraints
 Each constant definition is like a field description, except that it also assigns a value. This value assignment is indicated by use of an equal '=' sign, e.g. 
 
+
+
+---
 #  Catkin build system 
 What's **catkin**
 Catkin is the ROS build system to generate **executables, libraries and interfaces**
@@ -226,8 +230,8 @@ file structure
 
 
 
-#  Pubulisher and Subscribers
-## What are these
+##  Pubulisher and Subscribers
+### What are these
 Publisher is a node that ***publishes*** topics
 Subscriber ***listens*** to topics using the method `subsribe()` of the node handle.
 
@@ -237,7 +241,21 @@ a ROS Publisher…
 - creates a particular type of ROS message. In this case, it’s std_msgs/String, as can be seen on lines 4,7-8 of the code.
 - sends (publishes) a message over a channel called “topic”, as can be seen on lines 10 then 12 of the code.
 
+Link to Youtube Video (Python)
+https://www.youtube.com/watch?v=yqYvMEYJoTk
 
+##  ROS Service
+### What is a 'service'
+ROS Wiki Link: wiki.ros.org/Services
+YT tutorial Link: https://www.youtube.com/watch?v=o0difVe6GOw
+Request / reply is done via a Service, which is defined by a pair of messages: one for the request and one for the reply. A providing ROS node offers a service under a string name, and a client calls the service by sending the request message and awaiting the reply. Client libraries usually present this interaction to the programmer as if it were a remote procedure call.
+
+Services are defined using srv files, which are compiled into source code by a ROS client library.
+
+A client can make a persistent connection to a service, which enables higher performance at the cost of less robustness to service provider changes. 
+
+###  ROS Service Client
 
 
 #   ROS Parameter Server
+No info yet
