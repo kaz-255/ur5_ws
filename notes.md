@@ -1,9 +1,11 @@
 #ROS workspace environemnt
 
+
 Notes by **KA**
 info based on Youtube video
-` Programming for Robotics (ROS) Course 1 
-https://www.youtube.com/watch?v=0BxVPCInS3M`
+
+Programming for Robotics (ROS) Course 1 
+https://www.youtube.com/watch?v=0BxVPCInS3M
 
 
 
