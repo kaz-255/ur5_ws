@@ -1,4 +1,6 @@
-#ROS workspace environemnt
+
+
+#   ROS workspace environemnt
 
 
 Notes by **KA**
@@ -250,14 +252,58 @@ https://www.youtube.com/watch?v=yqYvMEYJoTk
 ### What is a 'service'
 ROS Wiki Link: wiki.ros.org/Services
 YT tutorial Link: https://www.youtube.com/watch?v=o0difVe6GOw
-Request / reply is done via a Service, which is defined by a pair of messages: one for the request and one for the reply. A providing ROS node offers a service under a string name, and a client calls the service by sending the request message and awaiting the reply. Client libraries usually present this interaction to the programmer as if it were a remote procedure call.
+>Request / reply is done via a Service, which is defined by a pair of messages: one for the request and one for the reply. A providing ROS node offers a service under a string name, and a client calls the service by sending the request message and awaiting the reply. Client libraries usually present this interaction to the programmer as if it were a remote procedure call.
 
-Services are defined using srv files, which are compiled into source code by a ROS client library.
+>Services are defined using srv files, which are compiled into source code by a ROS client library.
 
-A client can make a persistent connection to a service, which enables higher performance at the cost of less robustness to service provider changes. 
+>A client can make a persistent connection to a service, which enables higher performance at the cost of less robustness to service provider changes. 
+
+Essentially ROS Service request or respond communication between notes
+There are **service server** and **service client**.
+
+Similar to messages, services are defined in `*.srv` files.
+
+To list available services, use 
+
+    rosservice list
+
+Show the type of serice
+
+    rosservice type /service_name
+
+Call service 
+
+    rosservice call /service_name args
+
 
 ###  ROS Service Client
-
-
-#   ROS Parameter Server
 No info yet
+
+###   ROS Parameter Server
+No info yet
+
+## ROS ACTIONS
+Ros action is similar to service calls but may be cancelled 
+Also feedback to the first node
+
+Ieal for time-extended, goal-oriented behaviours.
+
+Structually similar to services, file extension `*.action`
+
+#   URDF
+URDF stands for Unified Robot Description Format. It defiines an XML that represents a rbot model in terms of:
+- Kinematics and Dynamics
+- Visuals
+- Collsion model
+
+URDF may be scripted with XACRO
+more information needed for this component
+
+Description consists of 
+- a set of link elements, and
+- a set of joints
+
+
+<img src='http://wiki.ros.org/urdf/XML/model?action=AttachFile&do=get&target=link.png' >
+
+
